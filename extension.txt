@@ -1,0 +1,9 @@
+The extension is an animation timeline scrubber. It uses the canvas clock and the existing speed control, rather than a second animation.
+
+The Timeline slider sits under the other controls, next to Pause and Resume. While a drawing plays, the slider follows the canvas clock from the start until the last path finishes. Drag it left to show an earlier moment, or right to jump ahead, including after the drawing has already finished and the picture is complete. The clock holds still during the drag. When you release the slider, playback continues from that moment at whatever speed is selected, including reverse.
+
+Pause sets the speed to 0 so the clock stays put. Resume restores the last non-zero speed and continues from the scrubbed time. Moving the speed slider to 0 also pauses, and choosing a speed again resumes from the current timeline position.
+
+Choosing another drawing, or creating a new one, resets the canvas clock and the timeline to the start. Editing the source or moving the shape slider does not restart the clock, so the timeline stays where it is while the picture updates.
+
+To try it, run gleam dev and open the app. Choose square_spiral or tree. Let the drawing finish, or press Pause partway through. Drag Timeline to the left and the picture rewinds. Drag it to the right to jump ahead. Press Resume, or set Speed above 0, and the animation continues from the point you chose. Then switch to another drawing and confirm that Timeline returns to the start.

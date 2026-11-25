@@ -1,0 +1,7 @@
+# Compiler output. Recreate with `gleam build`.
+/build
+
+# Local server logs, exported bundles, and editor session logs.
+/.server_logs
+*.zip
+.provenance/session-*
